@@ -1,0 +1,622 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(180deg,#4a4a4a,#5d5d5d,#747474,#5d5d5d,#4a4a4a);
+color:#fff;
+overflow-x:hidden;
+}
+
+#websiteContent{
+display:none;
+}
+
+/* PASSWORD */
+
+#passwordScreen{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:9999;
+background:linear-gradient(135deg,#5f5f5f,#787878,#909090);
+}
+
+.password-overlay{
+width:100%;
+height:100%;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:rgba(0,0,0,.45);
+backdrop-filter:blur(10px);
+}
+
+.password-box{
+
+width:90%;
+max-width:380px;
+
+padding:40px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.18);
+
+border-radius:25px;
+
+text-align:center;
+
+box-shadow:0 20px 45px rgba(0,0,0,.25);
+}
+
+.password-box h1{
+font-size:50px;
+margin-bottom:10px;
+}
+
+.password-box h2{
+margin-bottom:15px;
+font-family:'Playfair Display',serif;
+}
+
+.password-box p{
+color:#ececec;
+line-height:1.8;
+}
+
+.password-box input{
+
+width:100%;
+
+padding:14px;
+
+margin-top:18px;
+
+border:none;
+outline:none;
+
+border-radius:14px;
+
+background:rgba(255,255,255,.12);
+
+color:white;
+
+text-align:center;
+
+font-size:15px;
+}
+
+.password-box input::placeholder{
+color:#dddddd;
+}
+
+.password-box button{
+
+width:100%;
+
+padding:14px;
+
+margin-top:15px;
+
+border:none;
+
+border-radius:14px;
+
+background:#ffffff;
+
+color:#555;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.35s;
+}
+
+.password-box button:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 10px 25px rgba(255,255,255,.15);
+}
+
+.hint{
+
+margin-top:15px;
+
+font-size:14px;
+
+opacity:.7;
+}
+
+/* HERO */
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:30px;
+}
+
+.hero-content{
+
+max-width:720px;
+}
+
+.hero h1{
+
+font-family:'Playfair Display',serif;
+
+font-size:64px;
+
+margin-bottom:15px;
+
+text-shadow:0 5px 18px rgba(0,0,0,.25);
+}
+
+.hero h2{
+
+font-size:34px;
+
+margin-bottom:25px;
+
+font-weight:500;
+}
+
+.hero p{
+
+line-height:2;
+
+color:#f0f0f0;
+
+margin-bottom:35px;
+}
+
+.hero button{
+
+padding:15px 42px;
+
+border:none;
+
+border-radius:50px;
+
+background:#ffffff;
+
+color:#5a5a5a;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.35s;
+}
+
+.hero button:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 15px 30px rgba(255,255,255,.18);
+}
+
+/* SECTION */
+
+.section{
+
+padding:100px 20px;
+
+text-align:center;
+}
+
+.section-title{
+
+font-size:38px;
+
+margin-bottom:45px;
+
+font-family:'Playfair Display',serif;
+}
+
+/* GLASS CARD */
+
+.glass-card{
+
+max-width:850px;
+
+margin:auto;
+
+padding:40px;
+
+border-radius:25px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(16px);
+
+border:1px solid rgba(255,255,255,.15);
+
+line-height:2;
+
+box-shadow:0 15px 35px rgba(0,0,0,.2);
+}
+
+/* ABOUT CARDS */
+
+.cards{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+max-width:1100px;
+
+margin:auto;
+}
+
+.reason-card{
+
+padding:30px;
+
+border-radius:22px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(12px);
+
+border:1px solid rgba(255,255,255,.15);
+
+transition:.35s;
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.reason-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 20px 35px rgba(0,0,0,.25);
+}
+
+.reason-card h3{
+
+margin:15px 0;
+
+font-size:22px;
+}
+
+.reason-card p{
+
+color:#ededed;
+
+line-height:1.8;
+}
+
+/* LETTER */
+
+.letter-box{
+
+max-width:900px;
+
+margin:auto;
+
+padding:45px;
+
+border-radius:25px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(15px);
+
+border:1px solid rgba(255,255,255,.15);
+
+box-shadow:0 15px 35px rgba(0,0,0,.2);
+}
+
+.letter-box p{
+
+text-align:left;
+
+line-height:2.2;
+
+color:#f3f3f3;
+}
+
+/* FINAL */
+
+.final-section{
+
+padding:140px 20px;
+
+text-align:center;
+}
+
+.final-section h2{
+
+font-size:38px;
+
+margin-bottom:20px;
+
+font-family:'Playfair Display',serif;
+}
+
+.final-section h1{
+
+font-size:68px;
+
+font-family:'Playfair Display',serif;
+
+margin-bottom:30px;
+
+text-shadow:0 5px 20px rgba(0,0,0,.25);
+}
+
+.final-section p{
+
+max-width:700px;
+
+margin:auto;
+
+line-height:2;
+
+color:#efefef;
+}
+
+/* ENDING */
+
+.ending{
+
+padding:120px 20px;
+
+text-align:center;
+
+background:rgba(0,0,0,.15);
+
+backdrop-filter:blur(10px);
+}
+
+.ending h2{
+
+font-size:42px;
+
+margin-bottom:20px;
+
+font-family:'Playfair Display',serif;
+}
+
+.ending p{
+
+margin-top:10px;
+
+color:#f0f0f0;
+
+opacity:.85;
+}
+
+/* HEARTS */
+
+#hearts{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+pointer-events:none;
+
+z-index:1;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeUp{
+
+0%{
+opacity:0;
+transform:translateY(35px);
+}
+
+100%{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+.hero-content,
+.glass-card,
+.reason-card,
+.letter-box,
+.final-section,
+.ending{
+
+animation:fadeUp 1s ease both;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+width:8px;
+}
+
+::-webkit-scrollbar-track{
+background:#666;
+}
+
+::-webkit-scrollbar-thumb{
+background:#d9d9d9;
+border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+background:#ffffff;
+}
+
+/* SELECTION */
+
+::selection{
+background:#ececec;
+color:#555;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.password-box{
+
+width:92%;
+
+padding:30px 24px;
+}
+
+.password-box h1{
+font-size:42px;
+}
+
+.password-box h2{
+font-size:26px;
+}
+
+.hero{
+
+padding:20px;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.hero h2{
+font-size:26px;
+}
+
+.hero p{
+font-size:15px;
+line-height:1.9;
+}
+
+.hero button{
+
+width:100%;
+
+padding:15px;
+}
+
+.section{
+
+padding:80px 18px;
+}
+
+.section-title{
+font-size:30px;
+}
+
+.glass-card,
+.letter-box{
+
+padding:28px 22px;
+}
+
+.cards{
+
+grid-template-columns:1fr;
+
+gap:18px;
+}
+
+.reason-card{
+
+padding:24px;
+}
+
+.reason-card h3{
+font-size:20px;
+}
+
+.reason-card p{
+font-size:15px;
+}
+
+.final-section{
+
+padding:100px 20px;
+}
+
+.final-section h2{
+font-size:30px;
+}
+
+.final-section h1{
+font-size:44px;
+}
+
+.final-section p{
+font-size:15px;
+}
+
+.ending{
+
+padding:90px 20px;
+}
+
+.ending h2{
+font-size:34px;
+}
+
+.ending p{
+font-size:14px;
+}
+
+}
+
+@media(max-width:480px){
+
+.hero h1{
+font-size:36px;
+}
+
+.hero h2{
+font-size:22px;
+}
+
+.section-title{
+font-size:26px;
+}
+
+.final-section h1{
+font-size:38px;
+}
+
+.password-box input,
+.password-box button{
+
+font-size:15px;
+}
+
+}
